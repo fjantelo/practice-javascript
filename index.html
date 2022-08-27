@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Example</title>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+<script>document.addEventListener('DOMContentLoaded', function () {
+  const chart = Highcharts.chart('container', {
+      chart: {
+          type: 'bar'
+      },
+      title: {
+          text: 'Fruit Consumption'
+      },
+      xAxis: {
+          categories: ['Apples', 'Bananas', 'Oranges']
+      },
+      yAxis: {
+          title: {
+              text: 'Fruit eaten'
+          }
+      },
+      series: [{
+          name: 'Jane',
+          data: [1, 2, 4]
+      }, {
+          name: 'John',
+          data: [5, 7, 3]
+      }, {
+        name: 'Billy',
+        data: [4, 3, 6]
+      }]
+  });
+});</script>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+  function addDarkmodeWidget() {
+    new Darkmode().showWidget();
+  }
+  window.addEventListener('load', addDarkmodeWidget);
+</script>
+<body>
+  <div id="container" style="width:100%; height:400px;"></div>
+</body>
+</html>
